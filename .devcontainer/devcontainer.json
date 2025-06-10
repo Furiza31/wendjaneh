@@ -1,0 +1,44 @@
+{
+  "name": "Wendjaneh",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": "pnpm install",
+  "containerUser": "node",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "svelte.svelte-vscode",
+        "oderwat.indent-rainbow",
+        "PKief.material-icon-theme",
+        "github.copilot",
+        "github.copilot-chat",
+        "usernamehw.errorlens",
+        "whizkydee.material-palenight-theme",
+        "dbaeumer.vscode-eslint",
+        "yoavbls.pretty-ts-errors",
+        "chrisdias.promptboost",
+        "bradlc.vscode-tailwindcss",
+        "meganrogge.template-string-converter",
+        "fabiospampinato.vscode-terminals",
+        "vitest.explorer",
+        "anseki.vscode-color",
+        "christian-kohler.npm-intellisense",
+        "antfu.goto-alias",
+        "github.vscode-github-actions",
+        "shd101wyy.markdown-preview-enhanced",
+        "davidanson.vscode-markdownlint"
+      ],
+			"settings": {
+				"github.copilot.chat.codeGeneration.instructions": [
+					{
+						"text": "This dev container includes the TypeScript compiler (`tsc`) pre-installed and available on the `PATH` for TypeScript development. It contains the latest stable version of Node.js, pnpm, along with essential tools for building and testing TypeScript applications."
+					}
+				]
+			}
+		}
+  }
+}
