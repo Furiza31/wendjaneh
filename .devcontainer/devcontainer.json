@@ -32,13 +32,13 @@
         "shd101wyy.markdown-preview-enhanced",
         "davidanson.vscode-markdownlint"
       ],
-			"settings": {
-				"github.copilot.chat.codeGeneration.instructions": [
-					{
-						"text": "This dev container includes the TypeScript compiler (`tsc`) pre-installed and available on the `PATH` for TypeScript development. It contains the latest stable version of Node.js, pnpm, along with essential tools for building and testing TypeScript applications."
-					}
-				]
-			}
-		}
+      "settings": {
+        "github.copilot.chat.codeGeneration.instructions": [
+          {
+            "text": "This dev container includes the TypeScript compiler (`tsc`) pre-installed and available on the `PATH` for TypeScript development. It contains the latest stable version of Node.js, pnpm, along with essential tools for building and testing TypeScript applications."
+          }
+        ]
+      }
+    }
   }
 }

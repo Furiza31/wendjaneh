@@ -13,17 +13,17 @@
 
 ## 🚀 Scripts & commandes NPM
 
-| Commande                   | Description                               |
-| -------------------------- | ------------------------------------------|
-| `npm run dev`              | Serveur de développement                  |
-| `npm run build`            | Build de production                       |
-| `npm run lint`             | Exécution d’ESLint pour vérification      |
-| `npm run lint:fix`         | Correction automatique des erreurs ESLint |
-| `npm run test`             | Lancement des tests                       |
-| `npm run drizzle:generate` | Génération des migrations Drizzle         |
-| `npm run drizzle:migrate`  | Exécution des migrations Drizzle          |
-| `npm run drizzle:push`     | Pousser les migrations vers la DB         |
-| `npm run drizzle:studio`   | Lancer l’interface de gestion Drizzle     |
+| Commande                    | Description                               |
+| --------------------------- | ----------------------------------------- |
+| `pnpm run dev`              | Serveur de développement                  |
+| `pnpm run build`            | Build de production                       |
+| `pnpm run lint`             | Exécution d’ESLint pour vérification      |
+| `pnpm run lint:fix`         | Correction automatique des erreurs ESLint |
+| `pnpm run test`             | Lancement des tests                       |
+| `pnpm run drizzle:generate` | Génération des migrations Drizzle         |
+| `pnpm run drizzle:migrate`  | Exécution des migrations Drizzle          |
+| `pnpm run drizzle:push`     | Pousser les migrations vers la DB         |
+| `pnpm run drizzle:studio`   | Lancer l’interface de gestion Drizzle     |
 
 ## 🔐 Variables d’environnement
 
