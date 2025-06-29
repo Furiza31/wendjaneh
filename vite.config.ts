@@ -1,13 +1,11 @@
 import { sveltekit } from "@sveltejs/kit/vite";
+import tailwindcss from "@tailwindcss/vite";
 import { svelteTesting } from "@testing-library/svelte/vite";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [sveltekit()],
-  server: {
-    port: 3000,
-    host: "127.0.0.1",
-  },
+  plugins: [tailwindcss(), sveltekit()],
+  server: { port: 3000, host: "127.0.0.1" },
   test: {
     projects: [
       {

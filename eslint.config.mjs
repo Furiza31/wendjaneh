@@ -3,9 +3,10 @@ import antfu from "@antfu/eslint-config";
 
 export default antfu({
   type: "app",
-  // ignores: [
-  //   "assets/css/main.css",
-  // ],
+  ignores: [
+    "src/app.css",
+    "src/lib/server/db/migrations",
+  ],
   svelte: true,
   typescript: true,
   formatters: true,

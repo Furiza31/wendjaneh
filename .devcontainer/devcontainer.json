@@ -30,7 +30,8 @@
         "antfu.goto-alias",
         "github.vscode-github-actions",
         "shd101wyy.markdown-preview-enhanced",
-        "davidanson.vscode-markdownlint"
+        "davidanson.vscode-markdownlint",
+        "qwtel.sqlite-viewer"
       ],
       "settings": {
         "github.copilot.chat.codeGeneration.instructions": [

@@ -2,28 +2,37 @@
 
 ## 🛠️ Technologies & bibliothèques
 
-- **Framework** : SvelteKit
-- **Composants UI** : shadcn-svelte (<https://next.shadcn-svelte.com/>)
-- **CSS** : Tailwind CSS
-- **Authentification** : better-auth
-- **ORM** : Drizzle ORM (TypeScript)
-- **Langage** : TypeScript
-- **Linting** : ESLint
-- **Tests** : Vitest
+- [Drizzle ORM](https://orm.drizzle.team/docs/overview)
+- [SvelteKit Superforms](https://superforms.rocks/get-started/zod4)
+- [Zod v4 Documentation](https://zod.dev/v4)
+- [shadcn-svelte Components](https://www.shadcn-svelte.com/docs/components)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [SvelteKit Documentation](https://kit.svelte.dev/docs/introduction)
+- [better-auth Documentation](https://www.better-auth.com/docs/introduction)
+- [pnpm Documentation](https://pnpm.io/)
+- [Vitest Documentation](https://vitest.dev/guide/)
+- [ESLint Documentation](https://eslint.org/docs/latest/)
+- [SQLite Documentation](https://www.sqlite.org/docs.html)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
 
 ## 🚀 Scripts & commandes NPM
 
-| Commande                    | Description                               |
-| --------------------------- | ----------------------------------------- |
-| `pnpm run dev`              | Serveur de développement                  |
-| `pnpm run build`            | Build de production                       |
-| `pnpm run lint`             | Exécution d’ESLint pour vérification      |
-| `pnpm run lint:fix`         | Correction automatique des erreurs ESLint |
-| `pnpm run test`             | Lancement des tests                       |
-| `pnpm run drizzle:generate` | Génération des migrations Drizzle         |
-| `pnpm run drizzle:migrate`  | Exécution des migrations Drizzle          |
-| `pnpm run drizzle:push`     | Pousser les migrations vers la DB         |
-| `pnpm run drizzle:studio`   | Lancer l’interface de gestion Drizzle     |
+| Commande               | Description                                                       |
+| ---------------------- | ----------------------------------------------------------------- |
+| `pnpm run dev`         | Serveur de développement                                          |
+| `pnpm run build`       | Build de production                                               |
+| `pnpm run lint`        | Exécution d’ESLint pour vérification                              |
+| `pnpm run lint:fix`    | Correction automatique des erreurs ESLint                         |
+| `pnpm run test`        | Lancement des tests                                               |
+| `pnpm run check`       | Vérification de la configuration SvelteKit et TypeScript          |
+| `pnpm run check:watch` | Vérification continue de la configuration SvelteKit et TypeScript |
+| `pnpm run prepare`     | Préparation de Husky pour les hooks Git                           |
+| `pnpm run preview`     | Prévisualisation de la build de production                        |
+| `pnpm run db:migrate`  | Exécution des migrations Drizzle                                  |
+| `pnpm run db:generate` | Génération des migrations Drizzle                                 |
+| `pnpm run db:studio`   | Lancer l’interface de gestion Drizzle                             |
+| `pnpm run test:unit`   | Exécution des tests unitaires avec Vitest                         |
+| `pnpm run test`        | Exécution des tests unitaires avec Vitest en mode continu         |
 
 ## 🔐 Variables d’environnement
 
@@ -40,7 +49,7 @@
 
 - **Framework de test** : Vitest
 - **Coverage minimal** : 80%
-- **Lint CI** : Le pipeline échoue si `npm run lint` renvoie une erreur
+- **Lint CI** : Le pipeline échoue si `pnpm run lint` renvoie une erreur, assurez-vous de corriger les erreurs avant de soumettre une PR via `pnpm run lint:fix`.
 
 ## 📂 Structure du projet
 
