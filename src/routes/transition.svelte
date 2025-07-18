@@ -13,7 +13,7 @@
   };
 
   function scale(
-    node: Element,
+    _: Element,
     { delay = 0, duration = 150, easing = cubicIn }: Params = {},
   ): TransitionConfig {
     return {

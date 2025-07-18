@@ -1,12 +1,13 @@
 <script lang="ts">
   import "../app.css";
-  import Transition from "./transition.svelte";
 
-  const { children } = $props();
+  import type { Snippet } from "svelte";
+
+  const { children }: { children: Snippet } = $props();
 </script>
 
 <main class="w-full h-full bg-accent-foreground">
-  <Transition>
+  <section class="w-full h-full bg-accent">
     {@render children()}
-  </Transition>
+  </section>
 </main>
