@@ -18,10 +18,11 @@ fi
 
 # Generate branch name using opencode CLI
 echo "🤖 Generating branch name from issue..."
-OPENCODE_OUTPUT=$(pnpm run --silent opencode run "Get information about this GitHub issue using 'gh' CLI: $GITHUB_ISSUE_URL. Based on the issue title and description, generate a perfect git branch name. The branch name MUST follow this format: 'issue-XX-some-understanding-name where XX is the issue number. The branch should be suitable as a folder name. Always answer in the following JSON format: { name: 'issue-XX-some-understanding-name' }. ONLY JSON IS ALLOWED as an answer. No explanation or other text is allowed." 2>/dev/null)
+OPENCODE_OUTPUT=$(pnpm --silent exec opencode run "Get information about this GitHub issue using 'gh' CLI: $GITHUB_ISSUE_URL. Based on the issue title and description, generate a perfect git branch name. The branch name MUST follow this format: 'issue-XX-some-understanding-name where XX is the issue number. The branch should be suitable as a folder name. Always answer in the following JSON format: { name: 'issue-XX-some-understanding-name' }. ONLY JSON IS ALLOWED as an answer. No explanation or other text is allowed." 2>/dev/null)
 
 if [ $? -ne 0 ]; then
   echo "❌ Failed to run opencode CLI. Please ensure it is installed and configured correctly."
+  echo "Output was: $OPENCODE_OUTPUT"
   exit 1
 fi
 
@@ -62,6 +63,11 @@ if [ -d "$WORKTREE_PATH" ]; then
     echo "❌ Failed to remove existing worktree. Please check the directory and try again."
     exit 1
   fi
+  # Si la branche existe, on la supprime d'abord
+  if git show-ref --verify --quiet refs/heads/"$FEATURE_NAME"; then
+    echo "🤖 Branch '$FEATURE_NAME' already exists. Deleting it..."
+    git branch -D "$FEATURE_NAME"
+  fi
 fi
 
 # Create the worktree
@@ -88,6 +94,11 @@ cd "$WORKTREE_PATH"
 if [ -f "package.json" ]; then
   echo "🤖 Installing dependencies in the worktree..."
   pnpm install
+  if [ $? -ne 0 ]; then
+    echo "❌ Dependency installation failed. Please check your package.json and try again."
+    exit 1
+  fi
+  echo "🤖 Dependencies installed successfully."
 else
   echo "🤖 No package.json found in the worktree. Skipping dependency installation."
 fi
@@ -103,4 +114,11 @@ fi
 
 echo "✅ Worktree setup complete!"
 
-pnpm run --silent opencode run "You have successfully set up a new worktree for the GitHub issue: $GITHUB_ISSUE_URL with branch name: $FEATURE_NAME. You can now start working on your feature in the directory: $WORKTREE_PATH by referecing to @./.github/instructions/run-task.md" 2>/dev/null
+LAUNCH_OUTPUT=$(pnpm --silent exec opencode run "You have successfully set up a new worktree for the GitHub issue: $GITHUB_ISSUE_URL with branch name: $FEATURE_NAME. You can now start working on your feature in the directory: $WORKTREE_PATH by referecing to @./.github/instructions/run-task.md" 2>/dev/null)
+
+if [ $? -ne 0 ]; then
+  echo "❌ Failed to run opencode CLI for completion message. Please check the opencode CLI output."
+  echo "Output was: $LAUNCH_OUTPUT"
+else
+  echo "🤖 Completion message sent to opencode CLI."
+fi
