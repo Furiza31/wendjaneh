@@ -18,7 +18,7 @@ fi
 
 # Generate branch name using opencode CLI
 echo "🤖 Generating branch name from issue..."
-OPENCODE_OUTPUT=$(pnpm --silent exec opencode run "Get information about this GitHub issue using 'gh' CLI: $GITHUB_ISSUE_URL. Based on the issue title and description, generate a perfect git branch name. The branch name MUST follow this format: 'issue-XX-some-understanding-name where XX is the issue number. The branch should be suitable as a folder name. Always answer in the following JSON format: { name: 'issue-XX-some-understanding-name' }. ONLY JSON IS ALLOWED as an answer. No explanation or other text is allowed." 2>/dev/null)
+OPENCODE_OUTPUT=$(pnpm --silent exec opencode run "Get information about this GitHub issue using 'gh' CLI: $GITHUB_ISSUE_URL. Based on the issue title and description, generate a perfect git branch name. The branch name MUST follow this format: 'issue-XX-some-understanding-name where XX is the issue number. The branch should be suitable as a folder name. Always answer in the following JSON format: { name: 'issue-XX-some-understanding-name' }. ONLY JSON IS ALLOWED as an answer. DO NOT USE MARKDOWN FORMAT. No explanation or other text is allowed." 2>/dev/null)
 
 if [ $? -ne 0 ]; then
   echo "❌ Failed to run opencode CLI. Please ensure it is installed and configured correctly."
