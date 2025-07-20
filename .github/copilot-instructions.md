@@ -55,4 +55,44 @@
 
 Voici l’architecture principale du projet, avec une description de chaque dossier/fichier clé :
 
-TODO
+### 🏗️ Racine du projet `./`
+
+### 📁 Dossier `./src/`
+
+#### **Routes (`./src/routes/`)**
+Structure basée sur le système de routage file-based de SvelteKit :
+
+| Route                    | Description                                          |
+| ------------------------ | ---------------------------------------------------- |
+| `+layout.svelte`         | Layout principal avec styles globaux                 |
+| `+page.svelte`           | Page d'accueil publique                             |
+| `page.svelte.test.ts`    | Tests unitaires pour la page d'accueil              |
+| `transition.svelte`      | Composant de transition entre les pages             |
+| `auth/`                  | **Groupe de routes pour l'authentification**        |
+| `├── login/`             | Page de connexion                                    |
+| `├── register/`          | Page d'inscription (structure similaire à login)    |
+| `└── error/`             | Page d'erreur d'authentification                    |
+| `app/`                   | **Groupe de routes pour l'application protégée**    |
+
+#### **Bibliothèque (`./src/lib/`)**
+
+##### **Authentification (`./src/lib/auth/`)**
+| Fichier                  | Description                                          |
+| ------------------------ | ---------------------------------------------------- |
+| `auth.ts`                | Configuration better-auth avec Drizzle et GitHub    |
+| `auth-client.ts`         | Client better-auth pour le côté navigateur          |
+
+##### **Base de données (`./src/lib/server/db/`)**
+| Dossier/Fichier          | Description                                          |
+| ------------------------ | ---------------------------------------------------- |
+| `index.ts`               | Instance Drizzle configurée pour SQLite             |
+| `schemas/`               | **Schémas de base de données**                      |
+| `├── index.ts`           | Export centralisé des schémas                       |
+| `└── auth.ts`            | Schémas pour l'authentification (users, sessions)   |
+| `migrations/`            | **Migrations Drizzle générées automatiquement**     |
+
+##### **Composants UI (`./src/lib/components/ui/`)**
+
+##### **Hooks (`./src/lib/hooks/`)**
+
+##### **Stores (`./src/lib/stores/`)**

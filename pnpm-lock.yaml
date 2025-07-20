@@ -29,6 +29,9 @@ importers:
       lucide-svelte:
         specifier: ^0.525.0
         version: 0.525.0(svelte@5.33.19)
+      opencode-ai:
+        specifier: ^0.3.43
+        version: 0.3.43
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^4.14.1
@@ -2872,6 +2875,35 @@ packages:
 
   nwsapi@2.2.20:
     resolution: {integrity: sha512-/ieB+mDe4MrrKMT8z+mQL8klXydZWGR5Dowt4RAGKbJ3kIGEx3X4ljUo+6V73IXtUPWgfOlU5B9MlGxFO5T+cA==}
+
+  opencode-ai@0.3.43:
+    resolution: {integrity: sha512-0Yg0+8m+EGQYoYtEnOw4D6oFkXt5nF2H3zjQbA+dGmby2GOhIQGDwp/EbfxAwP0f7T/dm0Rid77iARzq1dx+ag==}
+    hasBin: true
+
+  opencode-darwin-arm64@0.3.43:
+    resolution: {integrity: sha512-aectDkTqpJW9/T8cZiSY1po3oiE1CneyY99gjRojgxXhbFfDvwWy1c1h9jF1e3/KnbeaBhW61aeWCG9WHDEsSw==}
+    cpu: [arm64]
+    os: [darwin]
+
+  opencode-darwin-x64@0.3.43:
+    resolution: {integrity: sha512-gh2ewHQcm9E9uS0igZrEzj8l7KTA9NXmzd3t7T7TZaAUBYGUa6vxIifbTYYn+OWExiq6udG11yz0YGvuO3/LUA==}
+    cpu: [x64]
+    os: [darwin]
+
+  opencode-linux-arm64@0.3.43:
+    resolution: {integrity: sha512-oCna1F3WK7n5UFOUyHeeuykCt6aConoFpbn9wylSzDA2A0InDBmOlHQ7y1jEt/zVdYNCY4eNSAumzMlyxQeNfw==}
+    cpu: [arm64]
+    os: [linux]
+
+  opencode-linux-x64@0.3.43:
+    resolution: {integrity: sha512-UiTXs1lY6LgU1/TUSn+s+AT+UGlvmCNuNEqRaFmlmMsND7720BXALtx4M21Z7JgRjBocADFrxuvjTQy4EyAQ9A==}
+    cpu: [x64]
+    os: [linux]
+
+  opencode-windows-x64@0.3.43:
+    resolution: {integrity: sha512-zaM3ZF1KIBl5wjFJWtGEZf8zGLlrv0kRCmicULEeO6XGhfFS/d9fOFHv7euWAfKZI8T8rzVIdEEBbyFHx/d0Tg==}
+    cpu: [x64]
+    os: [win32]
 
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -6369,6 +6401,29 @@ snapshots:
       boolbase: 1.0.0
 
   nwsapi@2.2.20: {}
+
+  opencode-ai@0.3.43:
+    optionalDependencies:
+      opencode-darwin-arm64: 0.3.43
+      opencode-darwin-x64: 0.3.43
+      opencode-linux-arm64: 0.3.43
+      opencode-linux-x64: 0.3.43
+      opencode-windows-x64: 0.3.43
+
+  opencode-darwin-arm64@0.3.43:
+    optional: true
+
+  opencode-darwin-x64@0.3.43:
+    optional: true
+
+  opencode-linux-arm64@0.3.43:
+    optional: true
+
+  opencode-linux-x64@0.3.43:
+    optional: true
+
+  opencode-windows-x64@0.3.43:
+    optional: true
 
   optionator@0.9.4:
     dependencies:

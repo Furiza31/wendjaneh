@@ -27,7 +27,7 @@
 </script>
 
 <Sidebar.Root>
-  <Sidebar.Content>
+  <Sidebar.Content class="bg-card text-card-foreground">
     <Sidebar.Group>
       <Sidebar.GroupLabel>Menu</Sidebar.GroupLabel>
       <Sidebar.GroupContent>

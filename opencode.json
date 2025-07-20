@@ -1,0 +1,27 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["./.github/instructions/*.md", "./.github/instructions/**/*.md", "./.github/copilot-instructions.md"],
+  "autoupdate": true,
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true
+    },
+    "github": {
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "enabled": true
+    },
+    "sequential-thinking": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "enabled": true
+    },
+    "mcp-deepwiki": {
+      "type": "local",
+      "command": ["npx", "-y", "mcp-deepwiki@latest"],
+      "enabled": true
+    }
+  }
+}

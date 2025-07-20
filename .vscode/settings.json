@@ -26,7 +26,7 @@
       "file": "**/*.ci.md"
     },
     {
-      "text": "Always use MCP context7 and promptboost when generating code. Ensure every suggestion and snippet is informed by MCP context7 and enhanced with promptboost."
+      "text": "Always use MCP context7, Sequential Thinking and promptboost when generating code. Ensure every suggestion and snippet is informed by MCP context7 and enhanced with promptboost."
     }
   ],
   "editor.gotoLocation.multipleDefinitions": "goto",
